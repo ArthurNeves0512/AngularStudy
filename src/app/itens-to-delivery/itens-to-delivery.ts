@@ -1,6 +1,7 @@
-import { Component, Input} from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
 import { ItemDelivery } from './item-delivery';
 import { FormsModule } from '@angular/forms';
+import { Item } from '../services/item';
 
 @Component({
   selector: 'app-itens-to-delivery',
@@ -10,11 +11,14 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class ItensToDelivery {
+
+  private item_service = inject(Item);
   @Input()season:String="";
   valorInicial:string="";
-  harvests:ItemDelivery[]=[];
+  crops:ItemDelivery[]=[];
   
   seasonUpdate():void{
     console.log(this.valorInicial);
+    this.crops=this.item_service.getItens(this.valorInicial);
   }
 }

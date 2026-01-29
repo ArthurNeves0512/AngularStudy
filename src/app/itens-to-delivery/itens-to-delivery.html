@@ -6,6 +6,23 @@
     Esse jeito vai ser apenas colocando o valor no campo, mas não conseguimos
     pegar o que esta sendo escrito, precisamos fazer um two ways data binding.
     <input type="text" [value]="valorInicial"> -->
-    <button type="button" class="enviar" (click)="seasonUpdate()" >Enviar todos</button></div>
+    <button type="button" class="enviar" (click)="seasonUpdate()" >Enviar todos</button>
+
+    @if (valorInicial!="" && crops!=undefined) {
+        <ul [className]="'lista-itens'">
+            @for (item of crops; track item._nome){
+                <li>
+                    <p>
+                        {{item._nome}}
+                        {{item._quantity}}
+                    </p>
+                    
+                </li>
+            }
+            
+        </ul>
+    }
+</div>
+
 
 
