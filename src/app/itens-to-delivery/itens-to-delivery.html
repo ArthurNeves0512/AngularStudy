@@ -1,3 +1,11 @@
+
 <div>
-    
-</div>
+    {{season}}
+    <input type="text" [value]="valorInicial">
+    <!-- 
+    Esse jeito vai ser apenas colocando o valor no campo, mas não conseguimos
+    pegar o que esta sendo escrito, precisamos fazer um two ways data binding.
+    <input type="text" [value]="valorInicial"> -->
+    <button type="button" class="enviar" (click)="seasonUpdate()" >Enviar todos</button></div>
+
+
