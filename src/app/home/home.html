@@ -1,0 +1,19 @@
+@switch (season) {
+    @case(1) {
+        <p>BBBB</p>
+    }
+    @case(2) {
+        <p>CCCCC</p>
+    }
+    @case(3) {
+        <p>DDDDDD</p>
+    }
+    @default {
+        <app-spring></app-spring>
+    }
+}
+<div>
+    <button type="button" (click)="nextSeason()">Proxima Estacão</button>
+</div>
+
+<router-outlet/>
