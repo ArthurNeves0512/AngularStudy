@@ -1,0 +1,44 @@
+.header{
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 70px  45px;
+    background-color: aqua;
+
+    .season-text{
+        border: 1px black solid;
+        width: 200px;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 30px;
+        font-size: 30px;
+    }
+    .next-season-button{
+        font-size: 30px;
+        height: 50px;
+    
+    }
+}
+.lists{
+    margin-top: 30px;
+    display: flex;
+    padding: 0 85px;
+    justify-content: space-evenly;
+
+    
+}
+.collum-label{
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    width: 250px;
+    border-radius: 30px;
+}
+.fish{
+    border: 1px blue solid;
+}
+.crops{
+    border: 1px green solid;
+}
+.forage{
+    border: 1px red solid;
+}
